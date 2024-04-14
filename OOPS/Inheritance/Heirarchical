@@ -1,0 +1,47 @@
+import java.util.*;
+
+class Hierarchical
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Shape");
+        
+        Shape s = new Shape();
+        s.area();
+        
+        System.out.println("Triangle");
+        
+        Triangle t = new Triangle();
+        t.area(3,4);
+        
+        System.out.println("Circle");
+
+        Circle c = new Circle();
+        c.area(4);
+
+    }
+}
+
+class Shape
+{
+    public void area()
+    {
+        System.out.println("display area");
+    }
+}
+
+class Triangle extends Shape
+{
+    public void area(int l, int h)
+    {
+        System.out.println(l*h/2);
+    }
+}
+
+class Circle extends Shape
+{
+    public void area(int r)
+    {
+        System.out.println((3.14)*r*r);
+    }
+}
