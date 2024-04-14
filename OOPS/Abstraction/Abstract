@@ -1,0 +1,30 @@
+import java.util.*;
+
+abstract class Car
+{
+    public void playMusic()
+    {
+        System.out.println("play music");
+    }
+
+    public abstract void drive();
+}
+
+class wagonR extends Car
+{
+    public void drive()
+    {
+        System.out.println("drive on the road"); 
+    }
+}
+
+
+class Abstract
+{
+    public static void main(String[] args)
+    {
+        Car obj = new wagonR();
+        obj.playMusic();
+        obj.drive();
+    }
+}
